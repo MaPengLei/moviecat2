@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div class="list ng-scope">
+    <ul>
+        <li ng-repeat="value in movie.subjects" class="ng-scope">
+            <a href="#/details">
+                <img ng-src="{{value.images.large}}" alt="" src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2397337958.jpg">
+            </a>
+            <div class="meta">
+                <h4>
+                    <span >{{value.title}}</span>
+                    <em>{{value.rating.average}}</em>
+                </h4>
+                <div class="otherinfo">
+                    类型:<!-- ngRepeat: gen in item.genres --><span ng-repeat="gen in value.genres" class="ng-binding ng-scope">{{gen}}</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
